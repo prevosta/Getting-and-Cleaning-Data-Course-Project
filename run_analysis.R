@@ -51,7 +51,7 @@ dataset <- rbind(test_dataset, training_dataset)
 # Extracts only the measurements on the mean and standard deviation for each measurement.
 std_name_col <- unlist( mapply(grep, "std()", my_name, fixed = TRUE) )
 mean_name_col <- unlist( mapply(grep, "mean()", my_name, fixed = TRUE) )
-good_name_col <- c( std_name_col, mean_name_col, 562, 563 )
+good_name_col <- c( std_name_col, mean_name_col )
 mean_std_dataset <- dataset[,good_name_col]
 
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
